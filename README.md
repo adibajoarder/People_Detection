@@ -1,8 +1,8 @@
-# People Detection and Analytics System using Ultralytics YOLO
+# People Detection and Analytics System using Ultralytics YOLOv11L
 
-A comprehensive computer vision pipeline for real-time people detection, gender classification, movement tracking, and analytical visualization using Ultralytics YOLO. This web-based application processes camera feeds, photographs, and videos to provide detailed analytics with an intuitive user interface.
+A comprehensive computer vision pipeline for real-time people detection, gender classification, movement tracking, and analytical visualization using Ultralytics YOLOv11L. This web-based application processes camera feeds, photographs, and videos to provide detailed analytics with an intuitive user interface.
 
-![People Detection Demo](https://img.shields.io/badge/YOLO-v8-blue) ![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-green) ![Python](https://img.shields.io/badge/Python-3.8+-yellow)
+![People Detection Demo](https://img.shields.io/badge/YOLO-v11L-blue) ![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-green) ![Python](https://img.shields.io/badge/Python-3.8+-yellow)
 
 ---
 
@@ -42,7 +42,7 @@ This project develops a state-of-the-art computer vision pipeline for analyzing 
 ## ✨ Features
 
 ### Core Detection Features
-- ✅ **YOLO-based People Detection**: Utilizes Ultralytics YOLOv8 for accurate person detection
+- ✅ **YOLO-based People Detection**: Utilizes Ultralytics YOLOv11L for accurate person detection
 - ✅ **Gender Classification**: Classifies detected individuals as male or female with confidence scoring
 - ✅ **Multi-Object Tracking**: Tracks individuals across frames with unique IDs using SimpleIOU tracker
 - ✅ **Bounding Box Visualization**: Color-coded boxes (green for male, pink for female)
@@ -202,7 +202,7 @@ This includes:
 
 ### Model Specifications
 
-- **Architecture**: YOLOv8 (Ultralytics)
+- **Architecture**: YOLOv11L (Ultralytics)
 - **Classes**: Person, Male, Female
 - **Input Size**: 640x640
 - **Model Size**: ~51MB
@@ -343,26 +343,40 @@ uvicorn app.main:app --reload
 
 ## 📸 Screenshots
 
+Experience the application interface through these screenshots:
+
+````carousel
 ### 1. Upload Interface
 ![Upload Interface](C:/Users/k94__18/.gemini/antigravity/brain/878dcde2-1eee-4743-8479-06b82259610f/uploaded_media_1_1770055447314.png)
-*Drag and drop interface for uploading videos, images, or GIFs*
+
+**Drag and drop interface** for uploading videos, images, or GIFs with support for multiple formats.
+
+<!-- slide -->
 
 ### 2. File Selection
 ![File Selection](C:/Users/k94__18/.gemini/antigravity/brain/878dcde2-1eee-4743-8479-06b82259610f/uploaded_media_2_1770055447314.png)
-*Browse and select video files for processing*
+
+**Browse and select** video files from your local system for processing.
+
+<!-- slide -->
 
 ### 3. Processing Status
 ![Processing Status](C:/Users/k94__18/.gemini/antigravity/brain/878dcde2-1eee-4743-8479-06b82259610f/uploaded_media_0_1770055447314.png)
-*Real-time processing status with progress indicator*
+
+**Real-time processing status** with progress indicator showing the detection pipeline in action.
+
+<!-- slide -->
 
 ### 4. Detection Results
 ![Detection Results](C:/Users/k94__18/.gemini/antigravity/brain/878dcde2-1eee-4743-8479-06b82259610f/uploaded_media_3_1770055447314.png)
-*Processed video showing:*
-- *Green bounding boxes for males*
-- *Pink bounding boxes for females*
-- *Statistics panel with real-time counts*
-- *Unique tracking IDs*
-- *Current frame information*
+
+**Processed video** with complete analytics:
+- Green bounding boxes for males
+- Pink bounding boxes for females
+- Statistics panel with real-time counts
+- Unique tracking IDs for each person
+- Current frame information and gender distribution
+````
 
 ---
 
@@ -497,15 +511,11 @@ Contributions are welcome! Please follow these steps:
 
 ---
 
-## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
 
 ## 👥 Authors
 
-- **Your Name** - *Initial work* - [YourGitHub](https://github.com/yourusername)
+- **Adiba Rahman Joarder** - *Initial work* - [adibajoarder](https://github.com/adibajoarder)
 
 ---
 
@@ -518,20 +528,16 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 📞 Contact
+## 📞 Contact 01708046272
 
 For questions, issues, or suggestions:
 
-- **GitHub Issues**: [Create an issue](https://github.com/yourusername/people_detection_app/issues)
-- **Email**: your.email@example.com
+- **GitHub Issues**: [Create an issue](https://github.com/adibajoarder)
+- **Email**: adibarahmanjoarder@gmail.com
 - **Documentation**: [Project Docs](https://docs.google.com/document/d/13g2G4WhUwOdepc1mslRuffs_tn9IRXHh/edit?usp=drive_link&ouid=106075921329979584868&rtpof=true&sd=true)
 
 ---
 
-## 🌟 Star History
 
-If you find this project useful, please consider giving it a star ⭐
-
----
 
 **Made with ❤️ using YOLO, FastAPI, and OpenCV**
