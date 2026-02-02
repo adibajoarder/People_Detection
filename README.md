@@ -519,7 +519,7 @@ Contributions are welcome! Please follow these steps:
 
 ---
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - **Ultralytics** for the YOLO implementation
 - **FastAPI** team for the excellent web framework
