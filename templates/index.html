@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Upload Video</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+<div class="page">
+  <div class="card">
+    <div class="header">
+      <h2>Upload shot</h2>
+      <span class="close">✕</span>
+    </div>
+
+    <div class="tabs">
+      <div class="tab">Images</div>
+      <div class="tab">GIFs</div>
+      <div class="tab active">Videos</div>
+    </div>
+
+    <form id="uploadForm">
+      <div class="drop-area" id="dropArea">
+        <div class="cloud">☁</div>
+        <p>Drag & drop to upload</p>
+        <small>or <span class="browse">browse</span></small>
+        <input type="file" id="fileInput" accept="video/*" hidden />
+      </div>
+
+      <div class="actions">
+        <button class="btn" type="submit">Upload</button>
+        <button class="btn secondary" id="previewBtn" type="button" style="display:none;">
+          Preview & Detect
+        </button>
+        <a class="btn ghost" href="/webcam">Live Webcam</a>
+      </div>
+    </form>
+
+    <p class="status" id="status"></p>
+  </div>
+</div>
+
+<script>
+const dropArea = document.getElementById("dropArea");
+const fileInput = document.getElementById("fileInput");
+const form = document.getElementById("uploadForm");
+const previewBtn = document.getElementById("previewBtn");
+const statusText = document.getElementById("status");
+
+let selectedFile = null;
+let uploadedFilename = null;
+
+dropArea.addEventListener("click", () => fileInput.click());
+
+fileInput.addEventListener("change", () => {
+  selectedFile = fileInput.files[0];
+});
+
+dropArea.addEventListener("dragover", (e) => {
+  e.preventDefault();
+  dropArea.classList.add("hover");
+});
+
+dropArea.addEventListener("dragleave", () => {
+  dropArea.classList.remove("hover");
+});
+
+dropArea.addEventListener("drop", (e) => {
+  e.preventDefault();
+  dropArea.classList.remove("hover");
+  selectedFile = e.dataTransfer.files[0];
+});
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  if (!selectedFile) {
+    alert("Please select a video file");
+    return;
+  }
+
+  statusText.innerText = "Uploading... ⏳";
+
+  const formData = new FormData();
+  formData.append("file", selectedFile);
+
+  const response = await fetch("/upload", {
+    method: "POST",
+    body: formData
+  });
+
+  const result = await response.json();
+  uploadedFilename = result.filename;
+
+  statusText.innerText = "Uploaded ✅";
+  previewBtn.style.display = "inline-block";
+});
+
+previewBtn.addEventListener("click", () => {
+  if (uploadedFilename) {
+    window.location.href = "/preview/" + uploadedFilename;
+  }
+});
+</script>
+
+</body>
+</html>

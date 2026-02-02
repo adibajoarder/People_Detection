@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Project specific - Large files
+outputs/*.mp4
+outputs/*.avi
+uploads/*.mp4
+uploads/*.avi
+uploads/*.mov
+models/*.pt
+
+# Keep directory structure but ignore contents
+!outputs/.gitkeep
+!uploads/.gitkeep
+!models/.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

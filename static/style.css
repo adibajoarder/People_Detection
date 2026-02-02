@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fdebed;
+}
+
+.page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 650px;
+  background: white;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.card.wide{
+  width: 980px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.tabs {
+  display: flex;
+  gap: 12px;
+  margin: 15px 0;
+}
+
+.tab {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: #f3f3f3;
+  font-size: 14px;
+}
+
+.tab.active {
+  background: #ff5c8a;
+  color: white;
+}
+
+.drop-area {
+  border: 2px dashed #ff5c8a;
+  border-radius: 14px;
+  padding: 60px;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 18px;
+}
+
+.drop-area.hover {
+  background: #fff0f5;
+}
+
+.cloud {
+  font-size: 34px;
+}
+
+.browse {
+  color: #ff5c8a;
+  font-weight: bold;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.btn {
+  border: none;
+  padding: 10px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  background: #ff5c8a;
+  color: white;
+  font-weight: bold;
+}
+
+.btn.secondary {
+  background: #ffe2ea;
+  color: #ff5c8a;
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 2px solid #ff5c8a;
+  color: #ff5c8a;
+}
+
+.status {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}

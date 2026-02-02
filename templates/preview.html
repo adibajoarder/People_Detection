@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Preview Detection</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+<div class="page">
+  <div class="card wide">
+    <h2>Preview & Detection</h2>
+    <p>Video file: <b>{{filename}}</b></p>
+
+    <button class="btn" id="runBtn">Run Detection</button>
+    <p class="status" id="status"></p>
+
+    <video id="videoPlayer" controls autoplay muted playsinline width="900"
+           style="display:none; margin-top:16px; border-radius: 14px;"></video>
+
+    <div style="margin-top: 16px;">
+      <a class="btn secondary" href="/">Back</a>
+    </div>
+  </div>
+</div>
+
+<script>
+const runBtn = document.getElementById("runBtn");
+const statusText = document.getElementById("status");
+const videoPlayer = document.getElementById("videoPlayer");
+
+runBtn.addEventListener("click", async () => {
+  statusText.innerText = "Processing... ⏳ Please wait.";
+  runBtn.disabled = true;
+
+  const res = await fetch("/process/{{filename}}");
+  const data = await res.json();
+
+  statusText.innerText = "Done ✅";
+  runBtn.disabled = false;
+
+  // force reload using a source element (explicit type helps some browsers)
+  videoPlayer.innerHTML = `<source src="${data.output_video}?t=${new Date().getTime()}" type="video/mp4">`;
+  videoPlayer.style.display = "block";
+  videoPlayer.load();
+  videoPlayer.play();
+});
+</script>
+
+</body>
+</html>
