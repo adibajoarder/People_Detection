@@ -367,13 +367,12 @@ Experience the application interface through these screenshots:
 ![Detection Results](./SS%20&%20video/66.PNG)
 
 ## 5. Final Result
-<iframe width="720" height="405"
-src="https://www.youtube.com/embed/kbzv0LaFjsc"
-title="Final Result Video"
-frameborder="0"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-allowfullscreen>
-</iframe>
+<div align="center">
+  <h3>Final Result Video</h3>
+  <a href="https://www.youtube.com/watch?v=kbzv0LaFjsc">
+    <img src="https://img.youtube.com/vi/kbzv0LaFjsc/0.jpg" alt="Final Result Video" style="width:100%;">
+  </a>
+</div>
 
 **Processed video** with complete analytics:
 - Green bounding boxes for males
@@ -381,7 +380,6 @@ allowfullscreen>
 - Statistics panel with real-time counts
 - Unique tracking IDs for each person
 - Current frame information and gender distribution
-````
 
 ---
 
