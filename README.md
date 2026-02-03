@@ -345,30 +345,35 @@ uvicorn app.main:app --reload
 
 Experience the application interface through these screenshots:
 
-````carousel
-### 1. Upload Interface
-![Upload Interface](C:/Users/k94__18/.gemini/antigravity/brain/878dcde2-1eee-4743-8479-06b82259610f/uploaded_media_1_1770055447314.png)
 
-**Drag and drop interface** for uploading videos, images, or GIFs with support for multiple formats.
+### 1. Upload Interface
+![Upload Interface](./SS%20&%20video/56.PNG)
 
 <!-- slide -->
 
 ### 2. File Selection
-![File Selection](C:/Users/k94__18/.gemini/antigravity/brain/878dcde2-1eee-4743-8479-06b82259610f/uploaded_media_2_1770055447314.png)
+![File Selection](./SS%20&%20video/44.PNG)
 
-**Browse and select** video files from your local system for processing.
 
 <!-- slide -->
 
 ### 3. Processing Status
-![Processing Status](C:/Users/k94__18/.gemini/antigravity/brain/878dcde2-1eee-4743-8479-06b82259610f/uploaded_media_0_1770055447314.png)
+![Processing Status](./SS%20&%20video/43.PNG)
 
-**Real-time processing status** with progress indicator showing the detection pipeline in action.
 
 <!-- slide -->
 
 ### 4. Detection Results
-![Detection Results](C:/Users/k94__18/.gemini/antigravity/brain/878dcde2-1eee-4743-8479-06b82259610f/uploaded_media_3_1770055447314.png)
+![Detection Results](./SS%20&%20video/66.PNG)
+
+### 5. Final Result
+<iframe width="600" height="340"
+        src="https://www.youtube.com/embed/kbzv0LaFjsc"
+        title="Final Result Video"
+        frameborder="0"
+        allowfullscreen>
+</iframe>
+
 
 **Processed video** with complete analytics:
 - Green bounding boxes for males
@@ -519,7 +524,7 @@ Contributions are welcome! Please follow these steps:
 
 ---
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - **Ultralytics** for the YOLO implementation
 - **FastAPI** team for the excellent web framework
