@@ -366,14 +366,14 @@ Experience the application interface through these screenshots:
 ### 4. Detection Results
 ![Detection Results](./SS%20&%20video/66.PNG)
 
-### 5. Final Result
-<iframe width="600" height="340"
-        src="https://www.youtube.com/embed/kbzv0LaFjsc"
-        title="Final Result Video"
-        frameborder="0"
-        allowfullscreen>
+## 5. Final Result
+<iframe width="720" height="405"
+src="https://www.youtube.com/embed/kbzv0LaFjsc"
+title="Final Result Video"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
 </iframe>
-
 
 **Processed video** with complete analytics:
 - Green bounding boxes for males
